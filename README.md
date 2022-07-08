@@ -1,8 +1,7 @@
-# Next Template
+# UAlberta CS Website
 
-Next.js app with BEM SCSS using JS (TS is overkill for frontend and unit tests are meaningless till at least MVP)
+Our demands and our vision
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)

@@ -62,8 +62,8 @@
 }
 
 @mixin buttons {
-  color: $main;
-  background-color: $button;
+  color: $color-main;
+  background-color: $color-button;
   font-size: 1.5rem;
   border: none;
   border-radius: 35px;
@@ -74,6 +74,6 @@
 
   &:hover,
   &:focus {
-    background-color: $button--hover;
+    background-color: $color-button--hover;
   }
 }

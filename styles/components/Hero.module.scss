@@ -1,0 +1,63 @@
+.hero {
+  @include center;
+  @include monitor {
+    flex-direction: column-reverse;
+  }
+  min-height: 80vh;
+
+  &__container {
+    padding-left: 15vw;
+    margin-bottom: 5vh;
+    width: 50vw;
+    @include phone {
+      padding-left: 5vw;
+    }
+  }
+
+  h1 {
+    color: $color-text-main;
+    @include phone {
+      font-size: 2rem;
+    }
+  }
+
+  h2,
+  p {
+    color: $color-text-main;
+    @include phone {
+      font-size: 1.5rem;
+    }
+  }
+
+  .flip {
+    transform: scaleX(-1) scaleY(-1);
+  }
+
+  .heroAside {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    width: 50vw;
+    height: 80vh;
+    @include small {
+      width: 100%;
+    }
+    div {
+      text-align: center;
+    }
+    & > div {
+      overflow: hidden;
+      @include small {
+        height: 40vh !important;
+        max-width: 80vw;
+      }
+    }
+  }
+
+  button {
+    @include buttons;
+    @include monitor {
+      margin-bottom: 3rem;
+    }
+  }
+}

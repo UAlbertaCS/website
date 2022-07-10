@@ -10,12 +10,19 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "@react-three/drei": "^9.17.0",
+    "@react-three/fiber": "^8.0.27",
+    "@splinetool/loader": "^0.9.75",
+    "@splinetool/r3f-spline": "^1.0.1",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.75",
     "cypress": "^10.0.2",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "sass": "^1.52.2",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "three": "^0.142.0"
   },
   "devDependencies": {
     "eslint": "8.16.0",

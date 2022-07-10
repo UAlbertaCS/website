@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Title from "../components/common/Title";
 import CONSTANTS from "../components/constants/constants";
-import Splash from "../components/main/splash";
+import Hero from "../components/main/Hero";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
       <Title title={CONSTANTS.DEFAULT_TITLE} />
       <Navbar />
       <main>
-        <Splash />
+        <Hero />
       </main>
     </>
   );

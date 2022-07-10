@@ -1,9 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import lottie from "lottie-web";
 import animationData from "../../public/data.json";
 
 const Story = () => {
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
   const lottiee = useRef(null);
+  useEffect(() => {
+    setHeight(window.innerHeight);
+  }, []);
 
   useEffect(() => {
     var animDuration = 3100;
@@ -17,15 +22,21 @@ const Story = () => {
     });
 
     function animatebodymovin(duration) {
-      const scrollPosition = window.scrollY;
-      const maxFrames = anim.totalFrames;
+      const scrollPosition = window.scrollY - height;
+      const maxFrames = anim.totalFrames - 10;
 
       const frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
 
-      anim.goToAndStop(frame, true);
+      console.log(frame);
+      if (frame < 0) {
+        anim.goToAndStop(0, true);
+      } else if (frame > maxFrames) {
+        anim.goToAndStop(maxFrames, true);
+      } else {
+        anim.goToAndStop(frame, true);
+      }
     }
     const onScroll = () => {
-      // console.log("Scrolling");
       animatebodymovin(animDuration);
     };
 
@@ -48,7 +59,7 @@ const Story = () => {
         {/* ref={intersectionRef}> */}
         <div
           className="story__container__video"
-          style={{ height: `${900 * 4}px` }}
+          style={{ height: `${height * 5 - 100}px` }}
         >
           <div style={{ position: "sticky", top: 0 }}>
             <div

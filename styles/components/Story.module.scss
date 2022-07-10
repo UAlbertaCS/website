@@ -10,6 +10,7 @@
   &__container {
     h2 {
       color: $color-main;
+      margin-bottom: 20px;
       @include phone {
         font-size: 2rem;
       }
@@ -23,7 +24,7 @@
       background-color: $color-secondary;
       top: 0px;
       .lottie {
-        width: 100vw;
+        width: 100%;
       }
     }
   }

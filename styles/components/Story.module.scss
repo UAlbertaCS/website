@@ -1,0 +1,40 @@
+.story {
+  @include spacing-room;
+  background-color: $color-secondary;
+  text-align: center;
+  @include monitor {
+    padding-left: 1rem;
+  }
+
+  &__container {
+    h2 {
+      color: $color-main;
+      @include phone {
+        font-size: 2rem;
+      }
+    }
+    p {
+      @include phone {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__container2 {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    h2 {
+      @include phone {
+        font-size: 3rem;
+      }
+      @include small-phone {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  button {
+    @include buttons;
+  }
+}

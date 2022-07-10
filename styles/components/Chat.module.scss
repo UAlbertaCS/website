@@ -1,0 +1,22 @@
+.chat {
+  @include spacing-room;
+  background-color: $color-main;
+  text-align: center;
+  @include monitor {
+    padding-left: 1rem;
+  }
+
+  &__container {
+    h2 {
+      color: $color-secondary;
+      @include phone {
+        font-size: 2rem;
+      }
+    }
+    p {
+      @include phone {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

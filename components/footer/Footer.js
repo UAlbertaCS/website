@@ -10,7 +10,7 @@ const Footer = () => {
           <hr />
           <ul>
             <li title="Home">
-              <Link href="/">Home</Link>
+              <Link href="/#">Home</Link>
             </li>
             <li title="Petition">
               <Link href="/#petition">Petition</Link>
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <Link href="/">
+          <Link href="/#">
             <img
               className="pointer"
               src={"/logo.svg"}

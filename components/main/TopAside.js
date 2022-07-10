@@ -8,7 +8,7 @@ export const TopAside = () => {
     <div className="heroAside">
       <iframe
         src="https://my.spline.design/main-bdf9f914a372467f06ea141d2dbc0677/"
-        frameborder="0"
+        frameBorder="0"
         width={600}
         height={600}
       />

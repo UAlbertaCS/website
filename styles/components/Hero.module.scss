@@ -45,13 +45,6 @@
     div {
       text-align: center;
     }
-    & > div {
-      overflow: hidden;
-      @include small {
-        height: 40vh !important;
-        max-width: 80vw;
-      }
-    }
   }
 
   button {

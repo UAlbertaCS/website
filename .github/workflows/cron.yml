@@ -7,9 +7,11 @@ on: push # testing
 #     - cron: "0 23 */2 * *" # runs every two days
 
 jobs:
-  build:
+  counter:
     runs-on: ubuntu-latest
 
+    env:
+      AIRTABLE_API_KEY: ${{secrets.AIRTABLE_API_KEY}}
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runner.
@@ -19,7 +21,6 @@ jobs:
           python-version: 3.8 # install the python needed
       - name: execute py script # run the run.py to get the latest data
         run: |
-          export AIRTABLE_API_KEY=${{env.AIRTABLE_API_KEY}}
           pip install pyairtable
           python cron.py
       - name: Commits File

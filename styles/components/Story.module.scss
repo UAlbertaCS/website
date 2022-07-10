@@ -22,6 +22,9 @@
     &__video {
       background-color: $color-secondary;
       top: 0px;
+      .lottie {
+        width: 100vw;
+      }
     }
   }
 

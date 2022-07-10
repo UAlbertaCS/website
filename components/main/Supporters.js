@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { useIntersection } from "react-use";
 import { Increaser } from "../Microblocks/Increaser";
+import Count from "../../pages/api/data.json";
 
 const Story = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,7 +18,7 @@ const Story = () => {
   return (
     <div className="supports" id="supports" ref={intersectionRef}>
       <h2>Current supporters ✊</h2>
-      <Increaser number={1001} scrolled={scrolled} />
+      <Increaser number={Count["Count"]} scrolled={scrolled} />
     </div>
   );
 };

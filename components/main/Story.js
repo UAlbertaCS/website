@@ -22,12 +22,14 @@ const Story = () => {
     });
 
     function animatebodymovin(duration) {
-      const scrollPosition = window.scrollY - height;
+      const scrollPosition = window.scrollY - 1000;
       const maxFrames = anim.totalFrames - 10;
 
       const frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
 
-      console.log(frame);
+      // debug
+      // console.log(frame);
+
       if (frame < 0) {
         anim.goToAndStop(0, true);
       } else if (frame > maxFrames) {

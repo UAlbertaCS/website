@@ -4,7 +4,7 @@ Our demands and our vision ✊
 
 Website: [ualbertacs.vercel.app](https://ualbertacs.vercel.app/)
 
-
+![demo.gif](./demo.gif)
 
 ## License
 

@@ -1,6 +1,79 @@
+@mixin small-phone {
+  @media only screen and(max-width: 400px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media only screen and(max-width: 600px) {
+    @content;
+  }
+}
+@mixin small {
+  @media only screen and (max-width: 800px) {
+    @content;
+  }
+}
+@mixin monitor {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin notSmall {
+  @media only screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+/* General Global */
 @mixin transition {
   transition: 0.2s;
   -moz-transition: 0.2s;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
+}
+
+@mixin full-screen {
+  min-height: 100vh;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin spacing-room {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+
+@mixin center-vert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin max-content {
+  max-width: 70vw;
+}
+
+@mixin safety-padding {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+
+@mixin buttons {
+  color: $main;
+  background-color: $button;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 35px;
+  padding: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $button--hover;
+  }
 }

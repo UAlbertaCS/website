@@ -1,6 +1,6 @@
 # UAlberta CS Website
 
-Our demands and our vision
+Our demands and our vision ✊
 
 ## License
 

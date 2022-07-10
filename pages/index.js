@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Title from "../components/common/Title";
 import CONSTANTS from "../components/constants/constants";
 import Footer from "../components/footer/Footer";

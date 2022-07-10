@@ -23,15 +23,15 @@ const Story = () => {
 
     function animatebodymovin(duration) {
       const scrollPosition = window.scrollY - 1000;
-      const maxFrames = anim.totalFrames - 10;
+      const maxFrames = anim.totalFrames - 5;
 
       const frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
 
       // debug
       // console.log(frame);
 
-      if (frame < 0) {
-        anim.goToAndStop(0, true);
+      if (frame <= 1) {
+        anim.goToAndStop(5, true);
       } else if (frame > maxFrames) {
         anim.goToAndStop(maxFrames, true);
       } else {
@@ -61,7 +61,7 @@ const Story = () => {
         {/* ref={intersectionRef}> */}
         <div
           className="story__container__video"
-          style={{ height: `${height * 5 - 100}px` }}
+          style={{ height: `${height * 5 - 50}px` }}
         >
           <div style={{ position: "sticky", top: 0 }}>
             <div

@@ -1,8 +1,10 @@
 name: cron
 
-on:
-  schedule:
-    - cron: "0 23 */2 * *" # runs every two days
+on: push # testing
+
+# on:
+#   schedule:
+#     - cron: "0 23 */2 * *" # runs every two days
 
 jobs:
   build:
@@ -18,5 +20,10 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         run: |
           python cron.py
-        env:
-          key: ${{ secrets.key }} # if run.py requires passwords..etc, set it as secrets
+      - name: Commits File
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: ${{ secrets.GH_NAME }}
+          author_email: ${{ secrets.GH_EMAIL }}
+          message: "🤖 Cron Generated JSON"
+          push: true

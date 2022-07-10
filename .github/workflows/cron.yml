@@ -19,6 +19,7 @@ jobs:
           python-version: 3.8 # install the python needed
       - name: execute py script # run the run.py to get the latest data
         run: |
+          export AIRTABLE_API_KEY={env.AIRTABLE_API_KEY}
           pip install pyairtable
           python cron.py
       - name: Commits File

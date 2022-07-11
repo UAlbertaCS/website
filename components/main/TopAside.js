@@ -4,6 +4,8 @@
 
 export const TopAside = () => {
   const hasWindow = typeof window !== "undefined";
+
+  // if (hasWindow && window.innerHeight < 1000) return;
   return (
     <div className="heroAside">
       <iframe

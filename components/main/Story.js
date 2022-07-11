@@ -30,7 +30,7 @@ const Story = () => {
       // debug
       // console.log(frame);
 
-      if (frame <= 1) {
+      if (frame <= 2) {
         anim.goToAndStop(5, true);
       } else if (frame > maxFrames) {
         anim.goToAndStop(maxFrames, true);

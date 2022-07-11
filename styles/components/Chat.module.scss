@@ -2,9 +2,6 @@
   @include spacing-room;
   background-color: $color-main;
   text-align: center;
-  @include monitor {
-    padding-left: 1rem;
-  }
 
   &__container {
     h2 {

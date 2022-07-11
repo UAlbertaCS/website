@@ -4,7 +4,6 @@ import animationData from "../../public/data.json";
 
 const Story = () => {
   const [height, setHeight] = useState(0);
-  const ref = useRef(null);
   const lottiee = useRef(null);
   useEffect(() => {
     setHeight(window.innerHeight);
@@ -58,7 +57,6 @@ const Story = () => {
         </div>
       </div>
       <div>
-        {/* ref={intersectionRef}> */}
         <div
           className="story__container__video"
           style={{ height: `${height * 5 - 50}px` }}

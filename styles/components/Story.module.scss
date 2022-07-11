@@ -20,6 +20,13 @@
     &__video {
       background-color: $color-secondary;
       top: 0px;
+      &__stick {
+        position: sticky;
+        top: 0;
+        @include phone {
+          height: 100vh;
+        }
+      }
       .lottie {
         width: 100%;
       }

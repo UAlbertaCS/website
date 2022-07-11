@@ -3,7 +3,7 @@ const Sign = () => {
     <div className="story" id="petition">
       <div className="story__container">
         <h2>Sign the Petition</h2>
-        <div>
+        <div className="story__iframe">
           <iframe
             className="airtable-embed"
             src="https://airtable.com/embed/shrCIjbQTm7piMB6q?backgroundColor=blue"

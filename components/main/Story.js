@@ -5,12 +5,13 @@ import animationData from "../../public/data.json";
 const Story = () => {
   const [height, setHeight] = useState(0);
   const lottiee = useRef(null);
+  const animDuration = 3100;
+
   useEffect(() => {
     setHeight(window.innerHeight);
   }, []);
 
   useEffect(() => {
-    var animDuration = 3100;
     const anim = lottie.loadAnimation({
       container: lottiee.current,
       renderer: "svg",
@@ -37,6 +38,7 @@ const Story = () => {
         anim.goToAndStop(frame, true);
       }
     }
+
     const onScroll = () => {
       animatebodymovin(animDuration);
     };
@@ -61,7 +63,7 @@ const Story = () => {
           className="story__container__video"
           style={{ height: `${height * 5 - 50}px` }}
         >
-          <div style={{ position: "sticky", top: 0 }}>
+          <div className="story__container__video__stick">
             <div
               ref={lottiee}
               className="lottie"

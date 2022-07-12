@@ -1,7 +1,12 @@
 import { isMobile } from "react-device-detect";
 
 export const TopAside = () => {
-  if (isMobile) return;
+  if (isMobile) {
+    alert(
+      "This website works best on desktop and may be unusable for your mobile device"
+    );
+    return;
+  }
 
   return (
     <div className="heroAside">

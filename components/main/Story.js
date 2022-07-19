@@ -1,11 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import lottie from "lottie-web";
+import { useIntersection } from "react-use";
 import animationData from "../../public/data.json";
 
 const Story = () => {
   const [height, setHeight] = useState(0);
   const lottiee = useRef(null);
   const animDuration = 3100;
+
+  // interaction
+  const [scrolled, setScrolled] = useState(false);
+  const [distFromTop, setDistFromTop] = useState(1000);
+  const intersectionRef = useRef(null);
+  const intersection = useIntersection(intersectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+  if (intersection && intersection.intersectionRatio > 0.75 && !scrolled) {
+    // console.error(window.scrollY);
+    setScrolled(true);
+    setDistFromTop(window.scrollY);
+  }
 
   useEffect(() => {
     setHeight(window.innerHeight);
@@ -22,7 +38,7 @@ const Story = () => {
     });
 
     function animatebodymovin(duration) {
-      const scrollPosition = window.scrollY - 1000;
+      const scrollPosition = window.scrollY - distFromTop;
       const maxFrames = anim.totalFrames - 5;
 
       const frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
@@ -55,7 +71,7 @@ const Story = () => {
     <>
       <div className="story" id="story">
         <div className="story__container">
-          <h2>Our Story</h2>
+          <h2 ref={intersectionRef}>Our Story</h2>
         </div>
       </div>
       <div>
